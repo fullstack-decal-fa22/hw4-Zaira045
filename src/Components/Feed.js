@@ -9,20 +9,15 @@ const Feed = () => {
     // Refer to Hint 2 for more help!
 
     /* Use the map() function to render multiple Blocks! */
-    // const [exper, setExper] = React.useState(null);
-    const [posts, setPosts] = React.useState([]); // TODO: edit this variable
-    const [p, setP] = React.useState(null)
-    // let posts = [];
+    const [posts, setPosts] = useState([]); // TODO: edit this variable
+    const [p, setP] = useState(null);
     function handleClick(color){
         posts.push(color)
         setPosts(posts)
         setP(posts.slice(0).reverse().map((color) => { return (
-            <Block color = {color}></Block>
-        );
-    }))
-        console.log(posts)
+            <Block color = {color}></Block>);
+        }))
     }
-
 
     return (
         <div>
